@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>PRYZM Young Enterprise Team</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/pryzm_transparent.png">
+</head>
+<body>
+<!--
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <span class="fixo" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  <!-- <img class="fixo" src="images/sidebar_icon2.png" onclick="openNav()">  -->
+</div>
+
+<!--<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script> -->
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ <div class="section hero">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h5 class="hero-heading">PRYZM</h4>
+		  <p class="value-description">A branch of Young Enterprise at Colchester Royal Grammar School</p>
+          <a class="button button-primary" href="http://getskeleton.com">About Us</a>
+        </div>
+        <div class="one-half column phones">
+          <img class="phone" src="images/pryzm_transparent.png">
+          <!-- <img class="phone" src="images/iphone.png"> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Contact</a>
+</div>
+    
+    <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+    
+  <div class="section values">
+    <div class="container">
+      <div class="row"> <!-- Countdown Timer from w3 -->
+        <!-- Display the countdown timer in an element -->
+          <p class="value-multiplier" id="demo"></p>
+
+          <script>
+              // Set the date we're counting down to
+              var countDownDate = new Date("Jul 31, 2018 00:00:00").getTime();
+
+              // Update the count down every 1 second
+              var x = setInterval(function() {
+
+                  // Get todays date and time
+                  var now = new Date().getTime();
+
+                  // Find the distance between now an the count down date
+                  var distance = countDownDate - now;
+
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                  
+                  var complete = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                  document.getElementById("demo").innerHTML = complete;
+                  document.getElementById("demo").className = "value-multiplier";
+
+    // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+                document.getElementById("demo").className = "value-multiplier";
+                }
+              }, 1000);
+          </script>
+          <p class="value-description">This company will be liquidated on 31st July 2018</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section get-help">
+    <div class="container">
+      <h3 class="section-heading">A Young Enterprise Business</h3>
+      <p class="section-description">PRYZM is a business formed as part of the Young Enterprise company programme</p>
+      <a class="button button-primary" href="www.young-enterprise.org.uk">Find out more about Young Enterprise</a>
+    </div>
+  </div>
+
+  <div class="section values">
+    <div class="container">
+      <h3 class="section-heading">Responsive Images</h3>
+      <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
+      <div class="row">
+        <div class="one-half column category">
+          <img class="u-max-full-width" src="images/pryzm_transparent.png">
+        </div>
+        <div class="one-half column category">
+          <img class="u-max-full-width" src="images/pryzm_transparent.png">
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
